@@ -14,9 +14,9 @@ app = Flask(__name__)
 
 #plein de truc a remplir la
 
-@app.route("/")
-def hello():
-    return "Hello World!"
+@app.route('/', methods = ['GET', 'POST'])
+def Chat():
+    return render_template('index.html')
 
 if __name__ == '__main__':
     app.debug = True
