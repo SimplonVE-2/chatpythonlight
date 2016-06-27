@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 #coding: utf-8
 
 import argparse
@@ -12,8 +12,11 @@ from rethinkdb.errors import RqlRuntimeError, RqlDriverError
 
 app = Flask(__name__)
 
-
 #plein de truc a remplir la
+
+@app.route("/")
+def hello():
+    return "Hello World!"
 
 if __name__ == '__main__':
     app.debug = True
